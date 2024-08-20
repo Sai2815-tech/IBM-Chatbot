@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoGuide Chatbot</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            padding-bottom: 60px; /* Ensure there's space for the footer */
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .center-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">EcoGuide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#reusable-products">Reusable Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#eco-friendly-household">Eco-Friendly Household Items</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#low-impact-electronics">Low-Impact Electronics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sustainable-fashion">Sustainable Fashion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container center-img">
+    <img src="img3.jpg" alt="EcoGuide Banner">
+</div>
+
+<div class="container content" id="reusable-products">
+    <h2>Reusable Products</h2>
+    <p>Reusable products are designed to reduce waste from single-use items. They are typically made from durable materials such as stainless steel, glass, or silicone, offering a sustainable alternative to disposable options. Examples include reusable shopping bags, water bottles, coffee cups, and food containers. By choosing reusable products, you can significantly minimize your environmental footprint and contribute to a cleaner planet.</p>
+</div>
+
+<div class="container content" id="eco-friendly-household">
+    <h2>Eco-Friendly Household Items</h2>
+    <p>Eco-friendly household items are crafted from sustainable materials or produced using environmentally friendly processes. These products help reduce the overall environmental impact of everyday activities. Examples include biodegradable cleaning products, energy-efficient appliances, bamboo kitchenware, and organic bedding. Choosing eco-friendly household items promotes sustainable living practices and supports efforts to conserve natural resources.</p>
+</div>
+
+<div class="container content" id="low-impact-electronics">
+    <h2>Low-Impact Electronics</h2>
+    <p>Low-impact electronics are designed with energy efficiency and environmental sustainability in mind. They minimize energy consumption during use and often incorporate recycled materials in their production. Examples include energy-star rated appliances, solar-powered gadgets, and electronics made from biodegradable or recyclable materials. Investing in low-impact electronics helps reduce carbon emissions and supports the transition towards a greener economy.</p>
+</div>
+
+<div class="container content" id="sustainable-fashion">
+    <h2>Sustainable Fashion</h2>
+    <p>Sustainable fashion promotes clothing and accessories that are made responsibly, considering both environmental and social impacts. This includes using organic or recycled materials, adhering to fair labor practices, and reducing waste throughout the supply chain. Examples include organic cotton apparel, recycled polyester clothing, ethically sourced jewelry, and upcycled fashion items. Embracing sustainable fashion choices supports ethical production practices and reduces the fashion industry's environmental footprint.</p>
+</div>
+
+<div class="container content" id="tips">
+    <h2>Waste Reduction Tips</h2>
+    <p>Learn how to reduce waste with these practical tips:</p>
+    <ul>
+        <li>Use reusable bags, bottles, and containers.</li>
+        <li>Compost food scraps and yard waste.</li>
+        <li>Recycle paper, plastic, glass, and metals.</li>
+        <li>Buy products with minimal packaging.</li>
+        <li>Repair and repurpose items instead of discarding them.</li>
+    </ul>
+</div>
+
+<div class="container content" id="recycling">
+    <h2>Recycling Guide</h2>
+    <p>Follow these guidelines to recycle effectively:</p>
+    <ul>
+        <li>Clean and dry recyclables before placing them in the bin.</li>
+        <li>Do not mix different types of recyclables.</li>
+        <li>Check with your local recycling program for specific rules.</li>
+        <li>Avoid recycling plastic bags and films.</li>
+        <li>Remove caps and lids from bottles and jars.</li>
+    </ul>
+</div>
+
+<div class="container content" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or feedback, feel free to reach out:</p>
+    <p>Email: <a href="mailto:info@ecoguide.com">info@ecoguide.com</a></p>
+    <p>Phone: +91 12345 67890</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 EcoGuide. All rights reserved.</p>
+</footer>
+
+<!-- Watson Assistant Chatbot Integration -->
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "5a35024d-f7f0-4ade-8f7c-cfb9d63699c7", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "7dacf8a4-ec0e-429a-b741-4a7a49ed2d6c", // The ID of your service instance.
+        onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+    });
+</script>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
